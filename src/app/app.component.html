@@ -5,130 +5,39 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- <div class="container-fluid text-center w-25">
-    <div class="row">
-        <div class="col-lg-12 nopadding ">
-        <input type="text" name="operacion" id="calculation" class="form-control h-100 text-right" placeholder={{pantalla}} disabled>
-        
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-3 nopadding">
-            <button (click)=addChar(7) id="siete" class="btn btn-primary btn-block btn_font" >7</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="ocho" class="btn btn-primary btn-block btn_font" (click)="addChar(8)">8</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="nueve" class="btn btn-primary btn-block btn_font" (click)="addChar(9)">9</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-3 nopadding">
-            <button id="cuatro" class="btn btn-primary btn-block btn_font" onclick='UserClickButton("4")'>4</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="cinco" class="btn btn-primary btn-block btn_font" onclick='UserClickButton("5")'>5</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="seis" class="btn btn-primary btn-block btn_font" onclick='UserClickButton("6")'>6</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="resta" class="btn btn-success btn-block btn_font" onclick='UserClickButton("-")'>-</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-3 nopadding">
-            <button id="siete" class="btn btn-primary btn-block btn_font" onclick='UserClickButton("7")'>7</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="ocho" class="btn btn-primary btn-block btn_font" onclick='UserClickButton("8")'>8</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="nueve" class="btn btn-primary btn-block btn_font" onclick='UserClickButton("9")'>9</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="multiplicacion" class="btn btn-success btn-block btn_font" onclick='UserClickButton("*")'>*</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-3 nopadding">
-            <button id="coma" class="btn btn-primary btn-block btn_font" onclick='UserClickButton(".")'>.</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="cero" class="btn btn-primary btn-block btn_font" onclick='UserClickButton("0")'>0</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="equal" class="btn btn-primary btn-block btn_font" onclick='CalculateValue()'>=</button>
-        </div>
-        <div class="col-xs-3 nopadding">
-            <button id="divide" class="btn btn-success btn-block btn_font" onclick='UserClickButton("/")'>/</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 nopadding">
-            <button class="btn btn-danger  btn-block" onclick="ClearData()">=</button>
-        </div>
-    </div>
-</div> -->
-<!-- <div class="container-fluid text-center">
-    <div class="row">
-        <div class="col-lg-12 nopadding">
-            <input type="text" name="calculation" id="calculation" class="form-control" style="padding: 10px; font-size: 30px; height: 50px;">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-3 nopadding">
-            <button id="7" class="btn btn-primary btn-block btn_font" (click)="addChar('7')">7</button>
-        </div>
-        <div class="col-3 nopadding">
-            <button id="8" class="btn btn-primary btn-block btn_font" onclick="UserClickButton('8')">8</button>
-        </div>
-        <div class="col-3 nopadding">
-            <button id="three" class="btn btn-primary btn-block btn_font" onclick="UserClickButton('3')">3</button>
-        </div>
-        <div class="col-3 nopadding">
-            <button id="add" class="btn btn-success btn-block btn_font" onclick='UserClickButton("+")'>+</button>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12 nopadding">
-            <button class="btn btn-danger btn-block" onclick="ClearData()">CLEAR</button>
-        </div>
-    </div>
-</div> -->
+
 <div class="container-fluid text-center w-25">
     <div class="calculator-screen w-100">
-      <input type="text" class="w-100 no-border" placeholder = {{pantalla}} readonly>
+        <input type="text" class="w-100 no-border" placeholder = {{pantalla}} readonly>
     </div>
     <div class="calculator-buttons container-fluid text-center">
-      <div class="row">
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('9')">9</button>
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('8')">8</button>
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('7')">7</button>
-        <button class="btn btn-secondary custom_button w-25" type="button" (click)="addOperacion('/')">/</button>
-      </div>
-      <div class="row">
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('6')">6</button>
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('5')">5</button>
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('4')">4</button>
-        <button class="btn btn-secondary custom_button w-25" type="button" (click)="addOperacion('*')">*</button>
-      </div>
-      <div class="row">
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('3')">3</button>
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('2')">2</button>
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('1')">1</button>
-        <button class="btn btn-secondary custom_button w-25" type="button" (click)="addOperacion('-')">-</button>
-      </div>
-      <div class="row">
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('.')">.</button>
-        <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('0')">0</button>
-        <button class="btn btn-secondary custom_button w-25" type="button" (click)="eliminar()">DEL</button>
-        <button class="btn btn-secondary custom_button w-25" type="button" (click)="addOperacion('+')">+</button>
-      </div>
-      <div class="row">
-        <button class="btn btn-secondary custom_button w-100" type="button" (click)="calcular()">=</button>
-      </div>
+        <div class="row">
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('9')">9</button>
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('8')">8</button>
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('7')">7</button>
+            <button class="btn btn-secondary custom_button w-25" type="button" (click)="addOperacion('/')">/</button>
+        </div>
+        <div class="row">
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('6')">6</button>
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('5')">5</button>
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('4')">4</button>
+            <button class="btn btn-secondary custom_button w-25" type="button" (click)="addOperacion('*')">*</button>
+        </div>
+        <div class="row">
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('3')">3</button>
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('2')">2</button>
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('1')">1</button>
+            <button class="btn btn-secondary custom_button w-25" type="button" (click)="addOperacion('-')">-</button>
+        </div>
+        <div class="row">
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('.')">.</button>
+            <button class="btn btn-secondary custom_button_num w-25" type="button" (click)="addChar('0')">0</button>
+            <button class="btn btn-secondary custom_button w-25" type="button" (click)="eliminar()">DEL</button>
+            <button class="btn btn-secondary custom_button w-25" type="button" (click)="addOperacion('+')">+</button>
+        </div>
+        <div class="row">
+            <button class="btn btn-secondary custom_button w-100" type="button" (click)="calcular()">=</button>
+        </div>
     </div>
-  </div>
+</div>
 <router-outlet></router-outlet>
