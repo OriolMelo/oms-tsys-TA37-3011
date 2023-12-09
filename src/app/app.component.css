@@ -1,0 +1,16 @@
+
+.custom_button_num{
+    border-radius: 0px;
+    background-color: rgb(143, 126, 126);
+    border-color: rgb(143, 126, 126);
+}
+
+.custom_button{
+    border-radius: 0px;
+    background-color: rgb(17, 199, 184);
+    border-color: rgb(17, 199, 184);;
+}
+
+input{
+    text-align: right;
+}
